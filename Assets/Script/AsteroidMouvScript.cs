@@ -8,14 +8,13 @@ public class AsteroidMouvScript : MonoBehaviour
 {
     public float speed;
     public Vector2 screenSize, asterSize;
-    // Start is called before the first frame update
+    
     void Start()
     {
         InitializeSizes();
         transform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 359));
     }
 
-    // Update is called once per frame
     void Update()
     {
         //teleportation :
@@ -72,6 +71,7 @@ public class AsteroidMouvScript : MonoBehaviour
         }
         */
     }
+
     void InitializeSizes()
     {
         screenSize = Camera.main.ViewportToWorldPoint(Vector2.one) - Camera.main.ViewportToWorldPoint(Vector2.zero);
