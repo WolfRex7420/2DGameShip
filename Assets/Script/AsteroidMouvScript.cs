@@ -45,6 +45,7 @@ public class AsteroidMouvScript : MonoBehaviour
 
         transform.position += transform.right * speed * Time.deltaTime;
         
+        /*
         //random rotation madness :
         //right
         if (transform.position.x >= screenSize.x / 2 + asterSize.x / 2)
@@ -69,7 +70,7 @@ public class AsteroidMouvScript : MonoBehaviour
         {
             transform.rotation = Quaternion.Euler(0, 0, Random.Range(0, 359));
         }
-
+        */
     }
     void InitializeSizes()
     {
