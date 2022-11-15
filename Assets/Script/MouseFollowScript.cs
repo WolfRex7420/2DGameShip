@@ -26,11 +26,11 @@ public class MouseFollowScript : MonoBehaviour
 
 
 
-        if (Input.GetKey(KeyCode.Space) && speed <= 100)
+        if (Input.GetKey(KeyCode.Space) && speed <= 25)
         {
             speed += acceleration * Time.deltaTime;
         }
-        if (!Input.GetKey(KeyCode.Space) && speed > 5)
+        if (Input.GetKey(KeyCode.LeftControl) && speed > 6)
         {
             speed -= acceleration * Time.deltaTime;
         }
