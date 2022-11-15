@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class MouseFollowScript : MonoBehaviour
 {
-    // Start is called before the first frame update
+    Vector3 mousePosition;
+    Vector2 position = new Vector2(0f, 0f);
+    WorldNewtonianMovement speed;
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
     void Update()
     {
-        Vector3 mousePosition = Input.mousePosition;
+        mousePosition = Input.mousePosition;
         Camera.main.WorldToScreenPoint(transform.position);
+        position = Vector2.Lerp(transform.position, mousePosition, speed);
     }
 }
