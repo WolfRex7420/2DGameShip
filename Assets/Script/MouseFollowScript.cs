@@ -57,7 +57,7 @@ public class MouseFollowScript : MonoBehaviour
         }
         //infoText.text = "Acceleration : " + acceleration + " ; Speed : " + speed + " :)";
         infoText.text = string.Format("{0:00}:{1:00}", Time.timeSinceLevelLoad / 60, Time.timeSinceLevelLoad % 60);
-        infoText.text += $"\nAcceleration :  {acceleration}   ; Speed :  {(int)speed}  :)";
+        infoText.text += $"\nAcceleration :  {acceleration}   , Speed :  {(int)speed}";
         //infoText.text = string.Format("Acceleration :  + {0} +  ; Speed :  + {1} +  :)", acceleration, speed);
     }
 
